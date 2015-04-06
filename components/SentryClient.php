@@ -30,9 +30,9 @@ class SentryClient extends CApplicationComponent
     const MAX_CULPRIT_LENGTH = 200;
 
     /**
-     * @var string dns to use when connecting to Sentry.
+     * @var string dsn to use when connecting to Sentry.
      */
-    public $dns;
+    public $dsn;
 
     /**
      * @var string name of the active environment.
@@ -252,7 +252,7 @@ class SentryClient extends CApplicationComponent
         );
         try {
             $this->checkTags($options['tags']);
-            return new Raven_Client($this->dns, $options);
+            return new Raven_Client($this->dsn, $options);
         } catch (Exception $e) {
             if (YII_DEBUG) {
                 throw new CException('SentryClient failed to create client: ' . $e->getMessage(), (int)$e->getCode());
