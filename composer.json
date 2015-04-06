@@ -1,6 +1,6 @@
 {
-    "name": "crisu83/yii-sentry",
-    "description": "Sentry for the Yii PHP framework.",
+    "name": "trong/yii-sentry",
+    "description": "Sentry for the Yii PHP framework. Fork of crisu83 with actual Raven version.",
     "keywords": ["yii", "sentry", "log", "error", "exception"],
     "type": "library",
     "license": "BSD-3-Clause",
