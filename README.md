@@ -38,7 +38,10 @@ Run the following command in the root directory of your project to install the e
 php composer.phar install
 ```
 
-> TIP: Create a path alias to Composer's vendor directory called **vendor** to ease class mapping to dependencies by adding it to ```aliases``` in your application configuration.
+> TIP: Create a path alias to Composer's vendor directory called **vendor** to ease class mapping to dependencies by adding it to ```aliases``` in your application configuration. Something like this:
+```php
+Yii::setPathOfAlias('vendor', dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'vendor');
+```
 
 If you do not want to use Composer, you can download the extension and its dependencies and set everything up manually.
 
