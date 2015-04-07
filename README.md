@@ -1,7 +1,7 @@
-yii-sentry
+yii-sentry (fork from [crisu83/yii-sentry](https://github.com/crisu83/yii-sentry))
 ==========
 
-[![Latest Stable Version](https://poser.pugx.org/crisu83/yii-sentry/v/stable.png)](https://packagist.org/packages/crisu83/yii-sentry)
+[![Latest Stable Version](https://poser.pugx.org/trong/yii-sentry/v/stable.png)](https://packagist.org/packages/trong/yii-sentry)
 
 Sentry for the Yii PHP framework.
 
@@ -28,7 +28,7 @@ The easiest way to install this extension is to use [Composer](http://getcompose
 
 ```js
   "require": {
-    "crisu83/yii-sentry": "<replace-with-latest-version>"
+    "trong/yii-sentry": "<replace-with-latest-version>"
   }
 ```
 
@@ -47,8 +47,8 @@ Once you have downloaded the extension add the following to your application con
 ```php
   'components' => array(
     'sentry' => array(
-      'class' => 'vendor.crisu83.yii-sentry.components.SentryClient',
-      'dns' => '<replace-with-your-sentry-dns>'
+      'class' => 'vendor.trong.yii-sentry.components.SentryClient',
+      'dsn' => '<replace-with-your-sentry-dns>'
     ),
   ),
 ```
@@ -77,7 +77,7 @@ To enable the SentryErrorHandler add the following to your application configura
 ```php
   'components' => array(
     'errorHandler' => array(
-      'class' => 'vendor.crisu83.yii-sentry.components.SentryErrorHandler',
+      'class' => 'vendor.trong.yii-sentry.components.SentryErrorHandler',
     ),
   ),
 ```
@@ -98,7 +98,7 @@ To enable the SentryLogRoute add the following to your application configuration
       'class' => 'CLogRouter',
       'routes' => array(
         array(
-          'class' => 'vendor.crisu83.yii-sentry.components.SentryLogRoute',
+          'class' => 'vendor.trong.yii-sentry.components.SentryLogRoute',
           'levels' => 'error, warning',
         ),
       ),
